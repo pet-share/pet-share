@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<img src="https://cdn.discordapp.com/attachments/779463103535906827/779969064902590494/unknown.png" width="100" height="100">  
+  
+	<title>Save Web Form Data to Spreadsheets</title>
+	<script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+	<script>
+		function SubForm (){
+			window.open('pet-share.github.io/SyncFiddle--MMiKSKVfPs9eGhoNmxA-20201122-094952.html');
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/3874/",
+				type:"post",
+				data:$("#myForm").serializeArray(),
+				success: function(){
+					alert("Form Data Submitted :)")
+				},
+				error: function(){
+					alert("There was an error :(")
+				}
+			});
+		}
+	</script>
+</head>
+  
+  <!background>
+<body style='background-color:#d98bd2;'>
+  
+    <style>
+body {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+</style>
+
+ 
+<body>
+  <h2>
+    Pet Share Information Form
+    
+  </h2>
+ 
+<button id="btnGenerate" onclick="random()">  ID Generate || Click Me || DO NOT FORGET </button>
+  
+ <script>
+ function random(){
+
+     var autoId = Math.floor(Math.random() * 1000000000);
+//document.getElementById("one").innerHTML = autoId; 
+
+ document.getElementById("btnGenerate").disabled=true;
+ txtID.value=autoId;
+}
+</script>
+  
+  <br>
+  <br>
+<b>
+
+
+  
+	<form id="myForm">
+    <fieldset>
+  	<legend>Personal Information:</legend>
+    
+		<label>ID</label>
+		<input name="ID" id="txtID"/>
+		<br/>
+		<label>Owner's First and Last Name:</label>
+		<input name="Owner's First and Last Name:" />
+		<br/>
+		<label>Email Address</label>
+		<input name="Email Address" />
+		<br/>
+		<label>Phone Number</label>
+		<input name="Phone Number" />
+		<br/>
+    <label>Address</label>
+		<input name="Address" />
+		<br/>
+     </fieldset>
+    
+    <fieldset>
+  	<legend>Pet Information:</legend>
+		<label>Breed of Animal</label>
+		<input name="Breed of Animal" />
+		<br/>
+		<label>Type of Animal</label>
+		<input name="Type of Animal" />
+		<br/>
+		
+		<label>Pet name</label>
+		<input name="Pet name" />
+		<br/>
+		<label>Gender</label>
+		<input name="Gender" />
+		<br/>
+		<label>DOB(pet)</label>
+		<input name="DOB(pet)" />
+		<br/>
+		<label>Neutered</label>
+		<input name="Neutered" />
+		<br/>
+		<label>Vaccination record(link)</label>
+		<input name="Vaccination record(link)" />
+		<br/>
+		<label>Attitude information about interactions (link)</label>
+		<input name="Attitude information about interactions (link)"     />
+		<br/>
+		<label>Anything else</label>
+		<input name="Anything else"/>
+		<br/>
+    </fieldset>
+	</form>
+	<button onclick='SubForm()'>Submit</button>
+  
+ 
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/8.1.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+</body>
